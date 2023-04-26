@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./images/meme.jpg"
+import Header from "./Header.js";
 
 export default function App(){
   
@@ -33,25 +33,36 @@ export default function App(){
   }
   return(
     <>
-    <div className="nav">
-      <img src={logo} alt="" />
-      <p>MemeGenerator</p> 
-    </div>
+    <Header/>
+   <div className="mainDiv">
+   <div className="firstDiv">
+   <div className="text">Make memes for <br /> free in minutes.</div>
+   <div className="text2">Design eye-catching memes with this online meme maker.</div>
     <div className="inputBoxes">
       <input className="inputBox" type="text" placeholder="Toptext" onChange={eventHandler} name="Toptext" value={memeData.Toptext}/>
       <input className="inputBox" type="text" placeholder="Bottomtext" onChange={eventHandler} name="Bottomtext" value={memeData.Bottomtext}/>
     </div>
-    <div className="btnDiv">
-    <button onClick={memeGenerator}>Get a new meme image</button>
+    <div className="btnDiv"><button onClick={memeGenerator}>Get a new meme image</button></div>
     </div>
     <div className="imgContainer">
+    <div className="imgContainer2">
     <p className="Toptext">{memeData.Toptext}</p>
-    <img className="memeImg" src={meme.randomImage} alt="" />
+    <img className="memeImg" src={meme.randomImage} alt="Click on Get a new meme image..!" />
     <p className="Bottomtext">{memeData.Bottomtext}</p>
     </div>
+    </div>
+    </div> 
     </>
   )
 }
+
+
+
+
+
+
+
+
 
 
 
